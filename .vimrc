@@ -80,3 +80,8 @@ let g:ycm_autoclose_preview_window_after_completion = 1
 
 execute pathogen#infect()
 call pathogen#helptags()
+
+
+" Plugin dependencies
+" ctrlp, nerdtree, tagbar, fugitive, surroud, nerdcommenter, pathogen,
+" closetag, multiple-cursors, youcompleteme
