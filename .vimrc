@@ -2,7 +2,7 @@
 autocmd! bufwritepost .vimrc source %
 
 " Default cpp template
-au BufNewFile *.cpp 0r ~/template.cpp
+au BufNewFile *.cpp 0r ~/Templates/template.cpp
 
 let mapleader = ","
 
@@ -12,6 +12,7 @@ set softtabstop=2
 set shiftwidth=2
 set number
 set expandtab
+set t_Co=256  " force vim to use 256 colors
 filetype off
 filetype plugin indent on
 syntax on
@@ -22,7 +23,9 @@ syntax on
 
 " Displayed Properties
 set showcmd
+color desert
 set cursorline
+hi CursorLine term=bold cterm=bold ctermbg=16
 highlight LineNr ctermbg=0
 
 
@@ -33,7 +36,7 @@ set hlsearch
 set pastetoggle=<F2>
 nnoremap gV `[v`]
 
-set mouse=a "mouse actions work
+" set mouse=a "mouse actions work
 
 " Disable creation of backup files
 set noswapfile
@@ -75,8 +78,25 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-j> <c-w>j
 
 
+" Ultisnips config
+"let g:UltiSnipsSnippetsDir        = $HOME.'/.vim/UltiSnips/'
+"let g:UltiSnipsSnippetDirectories=["UltiSnips"]
+let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+let g:UltiSnipsListSnippets="<c-h>"
+
+" YouCompleteMe configs
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_complete_in_comments = 1 
+let g:ycm_seed_identifiers_with_syntax = 1 
+let g:ycm_collect_identifiers_from_comments_and_strings = 1 
+
+" AirlineThemes configs
+let g:airline_theme='solarized'
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
 
 execute pathogen#infect()
 call pathogen#helptags()

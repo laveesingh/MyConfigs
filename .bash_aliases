@@ -5,8 +5,9 @@ alias mm="python manage.py makemigrations"
 alias mmm="python manage.py migrate"
 alias rs="python manage.py runserver"
 alias ms="python manage.py shell"
-alias virt="source venv/bin/activate"
+alias virt="source denv/bin/activate"
 alias devirt="deactivate"
+alias c++="g++ -std=c++14 -o a"
 
 song(){
   youtube-dl -x --audio-format mp3 "ytsearch: $* full song"
