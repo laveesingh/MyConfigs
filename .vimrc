@@ -92,11 +92,28 @@ let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_complete_in_comments = 1 
 let g:ycm_seed_identifiers_with_syntax = 1 
 let g:ycm_collect_identifiers_from_comments_and_strings = 1 
+let g:ycm_python_binary_path = '/usr/bin/python'
 
 " AirlineThemes configs
 let g:airline_theme='solarized'
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
+
+" syntastic configs
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+"let g:syntastic_javascript_checkers = ['eslint', 'jsxhint']
+"let g:syntastic_javascript_jsxhint_exec = 'jsx-jshint-wrapper'
+
+" vim-jsx configs
+let g:jsx_ext_required = 0
 
 execute pathogen#infect()
 call pathogen#helptags()
