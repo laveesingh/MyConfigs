@@ -1,8 +1,8 @@
-"Automatic reloading of .vimrc
+" Automatic reloading of .vimrc
 autocmd! bufwritepost .vimrc source %
 
 " Default cpp template
-au BufNewFile *.cpp 0r ~/Templates/template.cpp
+"au BufNewFile *.cpp 0r ~/Templates/template.cpp
 
 let mapleader = ","
 
@@ -79,7 +79,7 @@ nnoremap <c-j> <c-w>j
 
 
 " Ultisnips config
-"let g:UltiSnipsSnippetsDir        = $HOME.'/.vim/UltiSnips/'
+let g:UltiSnipsSnippetsDir        = '~/.vim/UltiSnips/'
 "let g:UltiSnipsSnippetDirectories=["UltiSnips"]
 let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
@@ -95,14 +95,11 @@ let g:ycm_collect_identifiers_from_comments_and_strings = 1
 let g:ycm_python_binary_path = '/usr/bin/python'
 
 " AirlineThemes configs
-let g:airline_theme='solarized'
-let g:airline#extensions#tabline#left_sep = ' '
-let g:airline#extensions#tabline#left_alt_sep = '|'
 
 " syntastic configs
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
@@ -118,7 +115,5 @@ let g:jsx_ext_required = 0
 execute pathogen#infect()
 call pathogen#helptags()
 
-
-" Plugin dependencies
-" ctrlp, nerdtree, tagbar, fugitive, surroud, nerdcommenter, pathogen,
-" closetag, multiple-cursors, youcompleteme
+" requires installation of monokai
+colorscheme monokai
