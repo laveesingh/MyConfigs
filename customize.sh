@@ -31,10 +31,16 @@ rm -rf vim-monokai/
 
 # Install vim plugins
 cd ~/.vim/bundle && git clone https://github.com/scrooloose/nerdcommenter.git
+cd ~/.vim/bundle && git clone https://github.com/Raimondi/delimitMate.git
+cd ~/.vim/bundle && git clone https://github.com/terryma/vim-multiple-cursors.git 
+cd ~/.vim/bundle && git clone https://github.com/Valloric/YouCompleteMe.git
+
+# to be installed
+# vim surround
 
 
 
-
+########## TEMPORARY ############
 
 
 # Install vim plugins

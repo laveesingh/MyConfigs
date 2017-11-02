@@ -13,6 +13,7 @@ set shiftwidth=2
 set number
 set expandtab
 set t_Co=256  " force vim to use 256 colors
+set background=dark
 filetype off
 filetype plugin indent on
 syntax on
