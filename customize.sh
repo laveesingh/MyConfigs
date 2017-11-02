@@ -30,33 +30,10 @@ rm -rf vim-monokai/
 
 
 # Install vim plugins
-cd ~/.vim/bundle && git clone https://github.com/scrooloose/nerdcommenter.git
-cd ~/.vim/bundle && git clone https://github.com/Raimondi/delimitMate.git
-cd ~/.vim/bundle && git clone https://github.com/terryma/vim-multiple-cursors.git 
-cd ~/.vim/bundle && git clone https://github.com/Valloric/YouCompleteMe.git
-
-# to be installed
-# vim surround
-
-
-
-########## TEMPORARY ############
-
-
-# Install vim plugins
-cd ~/.vim/bundle/ && git clone https://github.com/mxw/vim-jsx.git
-cd ~/.vim/bundle && git clone https://github.com/pangloss/vim-javascript
-cd ~/.vim/bundle && git clone https://github.com/raimondi/delimitmate
-cd ~/.vim/bundle && git clone https://github.com/othree/html5.vim
-
-# install xbuild for vim-ycm
-sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF
-echo "deb http://download.mono-project.com/repo/debian wheezy main" | sudo tee /etc/apt/sources.list.d/mono-xamarin.list
-sudo apt-get update
-sudo apt-get install mono-complete
-sudo npm install -g xbuild
-sudo apt-get install mono-xbuild
-
-# vim-syntastic extensions
-sudo npm install -g eslint babel-eslint eslint-plugin-react syntastic-react jshint react-tools
+git clone https://github.com/scrooloose/nerdcommenter.git ~/.vim/bundle/nerdcommenter
+git clone https://github.com/Raimondi/delimitMate.git ~/.vim/bundle/delimitMate
+git clone https://github.com/terryma/vim-multiple-cursors.git  ~/.vim/bundle/vim-multiple-cursors
+git clone https://github.com/Valloric/YouCompleteMe.git ~/.vim/bundle/YouCompleteMe
+git clone https://github.com/mxw/vim-jsx.git ~/.vim/bundle/vim-jsx
+git clone https://github.com/tpope/vim-surround.git ~/.vim/bundle/vim-surround
 
