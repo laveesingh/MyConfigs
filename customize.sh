@@ -1,6 +1,7 @@
 # Install vim & tmux
 sudo apt-get install vim -y
 sudo apt-get install tmux -y
+sudo apt-get install redshift -y
 
 # putting in configurations
 if [ ! -d "~/Documents/MyConfigs" ]; then
@@ -37,9 +38,15 @@ git clone https://github.com/terryma/vim-multiple-cursors.git  ~/.vim/bundle/vim
 git clone https://github.com/mxw/vim-jsx.git ~/.vim/bundle/vim-jsx
 git clone https://github.com/tpope/vim-surround.git ~/.vim/bundle/vim-surround
 git clone https://github.com/SirVer/ultisnips ~/.vim/bundle/ultisnips
+git clone https://github.com/pangloss/vim-javascript.git ~/.vim/bundle/vim-javascript
 
 # install YouCompleteMe for vim
 cd ~/.vim/bundle && git clone https://github.com/Valloric/YouCompleteMe.git
 cd YouCompleteMe
 git submodule update --init --recursive
 ./install.py
+
+
+# install tmux-resurrect
+git clone https://github.com/tmux-plugins/tmux-resurrect ~/.tmux/tmux-resurrect
+tmux source-file ~/.tmux.conf
