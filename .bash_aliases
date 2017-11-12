@@ -12,6 +12,7 @@ alias ta="tmux -2 attach -t"
 alias td="tmux -2 detach"
 alias tn="tmux -2 new-session -s"
 alias tl="tmux -2 ls"
+alias tname="tmux display-message -p '#S'"
 
 song(){
   youtube-dl -x --audio-format mp3 "ytsearch: $* full song"
