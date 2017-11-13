@@ -3,6 +3,12 @@ sudo apt-get install vim -y
 sudo apt-get install tmux -y
 sudo apt-get install redshift -y
 
+# Install nvm, node, npm
+wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.6/install.sh | bash
+bash
+nvm install 8
+nvm use 8
+
 # putting in configurations
 if [ ! -d "~/Documents/MyConfigs" ]; then
   git clone https://github.com/laveesingh/MyConfigs.git ~/Documents/MyConfigs
