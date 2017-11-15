@@ -45,6 +45,7 @@ git clone https://github.com/mxw/vim-jsx.git ~/.vim/bundle/vim-jsx
 git clone https://github.com/tpope/vim-surround.git ~/.vim/bundle/vim-surround
 git clone https://github.com/SirVer/ultisnips ~/.vim/bundle/ultisnips
 git clone https://github.com/pangloss/vim-javascript.git ~/.vim/bundle/vim-javascript
+git clone https://github.com/pseewald/vim-anyfold.git ~/.vim/bundle/vim-any-fold
 
 # install YouCompleteMe for vim
 cd ~/.vim/bundle && git clone https://github.com/Valloric/YouCompleteMe.git

@@ -113,6 +113,11 @@ let g:syntastic_check_on_wq = 0
 " vim-jsx configs
 let g:jsx_ext_required = 0
 
+" vim any-fold config
+let anyfold_activate=1
+set foldlevel=0
+
+
 execute pathogen#infect()
 call pathogen#helptags()
 
