@@ -1,1 +1,108 @@
-/home/lavee_singh/.config/Code/User/keybindings.json
+// Place your key bindings in this file to overwrite the defaults
+[
+    // Basic movement/navigation
+{
+   "key": "alt+j",
+   "command": "cursorDown",
+   "when": "editorTextFocus" 
+}, {
+   "key": "alt+k",
+   "command": "cursorUp",
+   "when": "editorTextFocus" 
+}, {
+   "key": "alt+l",
+   "command": "cursorRight",
+   "when": "editorTextFocus" 
+}, {
+   "key": "alt+h",
+   "command": "cursorLeft",
+   "when": "editorTextFocus" 
+}, {
+    "key": "alt+shift+j",
+    "command": "cursorPageDown",
+    "when": "editorTextFocus"
+},{
+    "key": "alt+shift+k",
+    "command": "cursorPageUp",
+    "when": "editorTextFocus",   
+},{
+    "key": "alt+shift+h",
+    "command": "cursorWordStartLeft",
+    "when": "editorTextFocus",
+},{
+    "key": "alt+shift+l",
+    "command": "cursorWordEndRight",
+    "when": "editorTextFocus"
+},{
+    "key": "alt+shift+4",
+    "command": "cursorLineEnd",
+    "when": "editorTextFocus"
+},{
+    "key": "alt+shift+0",
+    "command": "cursorLineStart",
+    "when": "editorTextFocus"
+}
+
+// word/line etc manipulation
+{
+    "key": "ctrl+l",
+    "command": "expandLineSelection",
+    "when": "editorTextFocus"
+},{
+    "key": "ctrl+i",
+    "command": "editor.action.joinLines",
+    "when": "editorTextFocus",
+}
+
+// Terminal Bindings
+{
+    "key": "ctrl+alt+1",
+    "command": "workbench.action.terminal.focusAtIndex1"
+},
+{
+    "key": "ctrl+alt+2",
+    "command": "workbench.action.terminal.focusAtIndex2"
+},
+{
+    "key": "ctrl+alt+3",
+    "command": "workbench.action.terminal.focusAtIndex3"
+},
+{
+    "key": "ctrl+`",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "terminalFocus"
+},
+{
+    "key": "ctrl+`",
+    "command": "workbench.action.terminal.focus",
+    "when": "!terminalFocus"
+},{
+    "key": "ctrl+shift+j",
+    "command": "workbench.action.toggleMaximizedPanel",
+    "when": "terminalFocus"
+},{
+    "key": "ctrl+p",
+    "command": "workbench.action.terminal.historyPrevious",
+    "when": "terminalFocus"
+},
+
+// focus/toggleMaximize
+
+{
+    "key": "ctrl+shift+m",
+    "command": "workbench.action.maximizeEditor",
+    "when": "editorTextFocus"
+},
+
+// format using prettier
+{
+    "key": "ctrl+shift+s",
+    "command": "editor.action.formatDocument",
+    "when": "editorTextFocus && !editorReadonly"
+},{
+    "key": "ctrl+shift+s",
+    "command": "editor.action.formatSelection",
+    "when": "editorHasSelection && editorTextFocus && !editorReadonly"
+}
+
+]

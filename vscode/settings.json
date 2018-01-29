@@ -1,1 +1,34 @@
-/home/lavee_singh/.config/Code/User/settings.json
+{
+    "workbench.colorTheme": "Ysgrifennwr",
+    "editor.minimap.enabled": false,
+    "gitlens.advanced.messages": {
+        "suppressCommitHasNoPreviousCommitWarning": false,
+        "suppressCommitNotFoundWarning": false,
+        "suppressFileNotUnderSourceControlWarning": false,
+        "suppressGitVersionWarning": false,
+        "suppressLineUncommittedWarning": false,
+        "suppressNoRepositoryWarning": false,
+        "suppressResultsExplorerNotice": false,
+        "suppressUpdateNotice": false,
+        "suppressWelcomeNotice": true
+    },
+    "vim.disableExtension": true,
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j", "j"],
+            "after": ["<ESC>"]
+        }
+    ],
+    "editor.acceptSuggestionOnCommitCharacter": false,
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "terminal.integrated.fontSize": 13,
+    "window.zoomLevel": 0,
+    "workbench.colorCustomizations": {
+        "editorCursor.foreground": "#0000ff",
+        "editorCursor.background": "#ffffff",
+    },
+    "explorer.confirmDelete": false,
+    "prettier.singleQuote": true,
+    "prettier.semi": false,
+}
