@@ -11,12 +11,15 @@ set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 set number
+set relativenumber
 set expandtab
 set t_Co=256  " force vim to use 256 colors
 set background=dark
 filetype off
 filetype plugin indent on
 syntax on
+set splitright
+set splitbelow
 " set textwidth=79
 
 
@@ -37,7 +40,7 @@ set hlsearch
 set pastetoggle=<F2>
 nnoremap gV `[v`]
 
-" set mouse=a "mouse actions work
+set mouse=a "mouse actions work
 
 " Disable creation of backup files
 set noswapfile

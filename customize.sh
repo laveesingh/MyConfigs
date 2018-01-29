@@ -18,6 +18,7 @@ ln -s ~/Documents/MyConfigs/.tmux.conf ~
 ln -s ~/Documents/MyConfigs/.bashrc ~
 ln -s ~/Documents/MyConfigs/.bash_aliases ~
 
+
 # Install pathogen vim package manager
 #echo "installing pathogen..."
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
@@ -46,6 +47,8 @@ git clone https://github.com/tpope/vim-surround.git ~/.vim/bundle/vim-surround
 git clone https://github.com/SirVer/ultisnips ~/.vim/bundle/ultisnips
 git clone https://github.com/pangloss/vim-javascript.git ~/.vim/bundle/vim-javascript
 git clone https://github.com/pseewald/vim-anyfold.git ~/.vim/bundle/vim-any-fold
+git clone https://github.com/prettier/vim-prettier.git ~/.vim/bundle/vim-prettier
+git clone https://github.com/posva/vim-vue.git ~/.vivm/bundle/vim-vue
 
 # install YouCompleteMe for vim
 cd ~/.vim/bundle && git clone https://github.com/Valloric/YouCompleteMe.git
