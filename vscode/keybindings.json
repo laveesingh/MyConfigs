@@ -41,7 +41,7 @@
     "key": "alt+shift+0",
     "command": "cursorLineStart",
     "when": "editorTextFocus"
-}
+},
 
 // word/line etc manipulation
 {
@@ -52,7 +52,7 @@
     "key": "ctrl+i",
     "command": "editor.action.joinLines",
     "when": "editorTextFocus",
-}
+},
 
 // Terminal Bindings
 {
