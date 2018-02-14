@@ -1,7 +1,5 @@
-# Install vim & tmux
-sudo apt-get install vim -y
-sudo apt-get install tmux -y
-sudo apt-get install redshift -y
+# Install initial commands/tools
+sudo apt -y install git vim tmux redshift curl wget xclip tree
 
 # Install nvm, node, npm
 wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.6/install.sh | bash
@@ -13,17 +11,25 @@ nvm use 8
 if [ ! -d "~/Documents/MyConfigs" ]; then
   git clone https://github.com/laveesingh/MyConfigs.git ~/Documents/MyConfigs
 fi
-ln -s ~/Documents/MyConfigs/.vimrc ~
-ln -s ~/Documents/MyConfigs/.tmux.conf ~
-ln -s ~/Documents/MyConfigs/.bashrc ~
-ln -s ~/Documents/MyConfigs/.bash_aliases ~
+if [ ! -f "~/.vimrc" ]; then
+  ln -s ~/Documents/MyConfigs/.vimrc ~
+fi
+if [ ! -f "~/.tmux.conf" ]; then
+  ln -s ~/Documents/MyConfigs/.tmux.conf ~
+fi
+if [ ! -f "~/.bashrc" ]; then
+  ln -s ~/Documents/MyConfigs/.bashrc ~
+fi
+if [ ! -f "~/.bash_aliases" ]; then
+  ln -s ~/Documents/MyConfigs/.bash_aliases ~
+fi
 
 
-# Install pathogen vim package manager
-#echo "installing pathogen..."
-mkdir -p ~/.vim/autoload ~/.vim/bundle && \
-  curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
-
+# setup vim properly
+if [ ! -d "~/.vim/bundle" ]; then
+  mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+    curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+fi
 
 # Install sublime colorschmes for vim
 #echo "installing molokai colorscheme for vim"
@@ -36,8 +42,6 @@ mv vim-monokai/colors/monokai.vim colors/
 rm -rf molokai/
 rm -rf vim-monokai/
 cd  # return back to home directory
-
-
 # Install vim plugins
 git clone https://github.com/scrooloose/nerdcommenter.git ~/.vim/bundle/nerdcommenter
 git clone https://github.com/Raimondi/delimitMate.git ~/.vim/bundle/delimitMate
@@ -49,7 +53,6 @@ git clone https://github.com/pangloss/vim-javascript.git ~/.vim/bundle/vim-javas
 git clone https://github.com/pseewald/vim-anyfold.git ~/.vim/bundle/vim-any-fold
 git clone https://github.com/prettier/vim-prettier.git ~/.vim/bundle/vim-prettier
 git clone https://github.com/posva/vim-vue.git ~/.vivm/bundle/vim-vue
-
 # install YouCompleteMe for vim
 cd ~/.vim/bundle && git clone https://github.com/Valloric/YouCompleteMe.git
 cd YouCompleteMe
