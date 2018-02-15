@@ -1,5 +1,7 @@
 # Install initial commands/tools
 sudo apt -y install git vim tmux redshift curl wget xclip tree
+sudo apt -y install -y python python-pip python3 python3-pip
+sudo -H pip install -y youtube-dl ipython bpython
 
 # Install nvm, node, npm
 wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.6/install.sh | bash
@@ -22,6 +24,12 @@ if [ ! -f "~/.bashrc" ]; then
 fi
 if [ ! -f "~/.bash_aliases" ]; then
   ln -s ~/Documents/MyConfigs/.bash_aliases ~
+fi
+if [ ! -f "~/.zshrc" ]; then
+  ln -s ~/Documents/MyConfigs/.zshrc ~
+fi
+if [ ! -f "~/z.sh" ]; then
+  ln -s ~/Documents/MyConfigs/z.sh ~
 fi
 
 
@@ -63,3 +71,6 @@ git submodule update --init --recursive
 # install tmux-resurrect
 git clone https://github.com/tmux-plugins/tmux-resurrect ~/.tmux/tmux-resurrect
 tmux source-file ~/.tmux.conf
+
+
+# vscode plugins list

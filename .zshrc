@@ -8,9 +8,9 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 export ZSH=/home/lavee/.oh-my-zsh
 
 # enable z.sh if available
-if [ -f "~/z.sh" ]; then
-  . ~/z.sh
-fi
+#if [ ! -f "~/z.sh" ]; then
+  source ~/z.sh
+#fi
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
