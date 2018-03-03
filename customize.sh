@@ -1,6 +1,6 @@
 # Install initial commands/tools
 sudo apt -y install git vim tmux redshift curl wget xclip tree
-sudo apt -y install -y python python-pip python3 python3-pip
+sudo apt -y install python python-pip python3 python3-pip
 sudo -H pip install -y youtube-dl ipython bpython
 
 # Install nvm, node, npm

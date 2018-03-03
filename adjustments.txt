@@ -1,0 +1,1 @@
+* set terminal fonts to "Monospace Regular 10"
