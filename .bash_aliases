@@ -10,7 +10,7 @@ alias tmux-restore="~/.tmux/tmux-resurrect/scripts/restore.sh"
 alias tmux-save="~/.tmux/tmux-resurrect/scripts/save.sh"
 alias ta="tmux -2 attach -t"
 alias td="tmux -2 detach"
-alias tn="tmux -2 new-session -s"
+alias tn="tmux -u2 new-session -s"
 alias tl="tmux -2 ls"
 alias tname="tmux display-message -p '#S'"
 
