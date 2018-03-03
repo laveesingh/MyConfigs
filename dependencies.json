@@ -1,0 +1,31 @@
+{
+  "python": [
+    "urllib3",
+    "youtube-dl"
+  ],
+  "vim": [
+    { "user": "scrooloose", "name": "nerdcommenter" }, 
+    { "user": "Raimondi", "name": "delimitMate" }, 
+    { "user": "terryma", "name": "vim-multiple-cursors" }, 
+    { "user": "mxw", "name": "vim-jsx" }, 
+    { "user": "tpope", "name": "vim-surround" }, 
+    { "user": "SirVer", "name": "ultisnips" }, 
+    { "user": "pangloss", "name": "vim-javascript" }, 
+    { "user": "pseewald", "name": "vim-anyfold" }, 
+    { "user": "prettier", "name": "vim-prettier" }, 
+    { "user": "posva", "name": "vim-vue" },
+    { "user": "Valloric", "name": "YouCompleteMe" }
+  ],
+  "apt": [
+    "cmake",
+    "git",
+    "vim",
+    "tmux",
+    "redshift",
+    "curl",
+    "wget",
+    "xclip",
+    "tree",
+    "python", "python3", "bpython", "bpython3", "ipython", "ipython3"
+  ]
+}
