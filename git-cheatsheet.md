@@ -21,3 +21,6 @@ git clean -f  # remove unstaged untracked changes
 git reset --hard  # removes staged and unstaged tracked changes
 git stash -u  # removes all tracked and untracked changes
 ```
+
+### Awesome links
+[Adding changes to older commit](https://stackoverflow.com/questions/2719579/how-to-add-a-changed-file-to-an-older-not-last-commit-in-git)
