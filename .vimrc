@@ -7,27 +7,25 @@ autocmd! bufwritepost .vimrc source %
 let mapleader = ","
 
 " Cool configurations 
+set backspace=indent,eol,start  " enable backspace key in several cases
+set ruler  " show info in statusline
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 set number
-set relativenumber
 set expandtab
 set t_Co=256  " force vim to use 256 colors
-set background=dark
-filetype off
+" set background=dark
+filetype on
 filetype plugin indent on
 syntax on
 set splitright
 set splitbelow
 " set textwidth=79
 
-
-
-
 " Displayed Properties
 set showcmd
-color desert
+colorscheme desert
 set cursorline
 hi CursorLine term=bold cterm=bold ctermbg=16
 highlight LineNr ctermbg=0
@@ -40,7 +38,7 @@ set hlsearch
 set pastetoggle=<F2>
 nnoremap gV `[v`]
 
-set mouse=a "mouse actions work
+" set mouse=a "mouse actions work
 
 " Disable creation of backup files
 set noswapfile
@@ -48,6 +46,9 @@ set nobackup
 set nowritebackup
 set colorcolumn=80
 highlight ColorColumn ctermbg=0;
+
+" autoread on filechange
+set autoread
 
 " Movement in insertion mode
 imap <c-h> <Left>
@@ -61,6 +62,7 @@ imap <c-u> <ESC><c-u>a
 
 imap <C-Space> <C-X><C-O>
 
+let mapleader=","
 "Tab movements
 map <Leader>j <esc>:tabprevious<CR>
 map <Leader>k <esc>:tabnext<CR>
@@ -69,11 +71,8 @@ map <Leader>k <esc>:tabnext<CR>
 vnoremap < <gv
 vnoremap > >gv
 
-let mapleader=","
-ab kkk n
-ab lll b
-inoremap jj <ESC>
 
+inoremap jj <ESC>
 
 " Split movements
 nnoremap <c-h> <c-w>h
@@ -91,12 +90,14 @@ let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 let g:UltiSnipsListSnippets="<c-h>"
 
 " YouCompleteMe configs
+let g:ycm_min_num_of_chars_for_completion = 1
+let g:ycm_auto_trigger = 1
+let g:ycm_complete_in_comments = 1 
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
-let g:ycm_complete_in_comments = 1 
 let g:ycm_seed_identifiers_with_syntax = 1 
 let g:ycm_collect_identifiers_from_comments_and_strings = 1 
-let g:ycm_python_binary_path = '/usr/bin/python'
+let g:ycm_python_binary_path = '/usr/bin/python3'
 
 " AirlineThemes configs
 
@@ -125,4 +126,26 @@ execute pathogen#infect()
 call pathogen#helptags()
 
 " requires installation of monokai
-colorscheme monokai
+"colorscheme monokai
+
+
+" Autostart NERDTree
+"autocmd vimenter * NERDTree
+"autocmd BufNew * NERDTree
+map <Leader>t :NERDTreeToggle<CR>
+let NERDTreeMapOpenInTab='<ENTER>'
+
+" fzf settings
+" Mapping selecting mappings
+nmap <leader><tab> <plug>(fzf-maps-n)
+xmap <leader><tab> <plug>(fzf-maps-x)
+omap <leader><tab> <plug>(fzf-maps-o)
+
+" Insert mode completion
+imap <c-x><c-k> <plug>(fzf-complete-word)
+imap <c-x><c-f> <plug>(fzf-complete-path)
+imap <c-x><c-j> <plug>(fzf-complete-file-ag)
+imap <c-x><c-l> <plug>(fzf-complete-line)
+
+" Advanced customization using autoload functions
+inoremap <expr> <c-x><c-k> fzf#vim#complete#word({'left': '15%'})2
