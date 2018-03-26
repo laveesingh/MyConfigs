@@ -56,6 +56,7 @@ def install_vim_packages(packages_list):
         'name': 'fugitive'
     }
     '''
+    cwd = os.getcwd()
     os.chdir('/home/lavee/.vim/bundle/')  # do something with this static username
     for plugin in packages_list:
         if os.path.isfile(plugin['name']) or os.path.isdir(plugin['name']):
@@ -70,6 +71,7 @@ def install_vim_packages(packages_list):
             success('installed vim package [%s]' % plugin['name'])
         except:
             alert('vim package [%s] could not be installed' % plugin)
+    os.chdir(cwd)
 
 
 def install_python_packages(packages_list):
@@ -95,8 +97,9 @@ if __name__ == '__main__':
     args = parse_arguments()
     if args.apt or args.vim or args.python:
         apt_packages_list = args.apt if args.apt else []
-        vim_packages_list = args.vim if args.apt else []
-        python_packages_list = args.python if args.apt else []
+        vim_packages_list = args.vim if args.vim else []
+        vim_packages_list = [{ 'user': s.split('/')[0], 'name': s.split('/')[1] } for s in vim_packages_list ]
+        python_packages_list = args.python if args.python else []
     else:
         with open('dependencies.json') as f:
             json_data = json.loads(f.read())
@@ -106,3 +109,16 @@ if __name__ == '__main__':
     install_apt_packages(apt_packages_list)
     install_vim_packages(vim_packages_list)
     install_python_packages(python_packages_list)
+    if args.apt or args.vim or args.python:
+        with open('dependencies.json') as f:
+            json_data = json.loads(f.read())
+            apt_packages_list += json_data['apt']
+            vim_packages_list += json_data['vim']
+            python_packages_list += json_data['python']
+        f = open('dependencies.json', 'w+')
+        json_dict = {
+            'python': python_packages_list,
+            'vim': vim_packages_list,
+            'apt': apt_packages_list
+        }
+        f.write(json.dumps(json_dict, sort_keys=True, indent=4))
