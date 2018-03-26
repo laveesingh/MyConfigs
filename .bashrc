@@ -132,6 +132,4 @@ function set-title() {
   PS1=${ORIG}${TITLE}
 }
 
-export EMAIL="archives987@gmail.com"
-export PASS="Test!@#$"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
