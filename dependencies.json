@@ -1,31 +1,125 @@
 {
-  "python": [
-    "urllib3",
-    "youtube-dl"
-  ],
-  "vim": [
-    { "user": "scrooloose", "name": "nerdcommenter" }, 
-    { "user": "Raimondi", "name": "delimitMate" }, 
-    { "user": "terryma", "name": "vim-multiple-cursors" }, 
-    { "user": "mxw", "name": "vim-jsx" }, 
-    { "user": "tpope", "name": "vim-surround" }, 
-    { "user": "SirVer", "name": "ultisnips" }, 
-    { "user": "pangloss", "name": "vim-javascript" }, 
-    { "user": "pseewald", "name": "vim-anyfold" }, 
-    { "user": "prettier", "name": "vim-prettier" }, 
-    { "user": "posva", "name": "vim-vue" },
-    { "user": "Valloric", "name": "YouCompleteMe" }
-  ],
-  "apt": [
-    "cmake",
-    "git",
-    "vim",
-    "tmux",
-    "redshift",
-    "curl",
-    "wget",
-    "xclip",
-    "tree",
-    "python", "python3", "bpython", "bpython3", "ipython", "ipython3"
-  ]
+    "apt": [
+        "cmake",
+        "git",
+        "vim",
+        "tmux",
+        "redshift",
+        "curl",
+        "wget",
+        "xclip",
+        "tree",
+        "python",
+        "python3",
+        "bpython",
+        "bpython3",
+        "ipython",
+        "ipython3"
+    ],
+    "python": [
+        "urllib3",
+        "youtube-dl"
+    ],
+    "vim": [
+        {
+            "name": "fzf.vim",
+            "user": "junegunn"
+        },
+        {
+            "name": "ctrlp.vim",
+            "user": "kien"
+        },
+        {
+            "name": "completor.vim",
+            "user": "maralla"
+        },
+        {
+            "name": "carbonized",
+            "user": "nightsense"
+        },
+        {
+            "name": "atom",
+            "user": "gregsexton"
+        },
+        {
+            "name": "vim-afterglow",
+            "user": "danilo-augusto"
+        },
+        {
+            "name": "vim-afterglow",
+            "user": "dunilo-augusto"
+        },
+        {
+            "name": "afterglow",
+            "user": "dunilo-augusto"
+        },
+        {
+            "name": "angr.vim",
+            "user": "zacanger"
+        },
+        {
+            "name": "cobalt2.vim",
+            "user": "herrbischoff"
+        },
+        {
+            "name": "cobalt2",
+            "user": "herrbischoff"
+        },
+        {
+            "name": "syntastic",
+            "user": "scrooloose"
+        },
+        {
+            "name": "syntastic",
+            "user": "scrooloose"
+        },
+        {
+            "name": "nerdcommenter",
+            "user": "scrooloose"
+        },
+        {
+            "name": "nerdtree",
+            "user": "scrooloose"
+        },
+        {
+            "name": "delimitMate",
+            "user": "Raimondi"
+        },
+        {
+            "name": "vim-multiple-cursors",
+            "user": "terryma"
+        },
+        {
+            "name": "vim-jsx",
+            "user": "mxw"
+        },
+        {
+            "name": "vim-surround",
+            "user": "tpope"
+        },
+        {
+            "name": "ultisnips",
+            "user": "SirVer"
+        },
+        {
+            "name": "vim-javascript",
+            "user": "pangloss"
+        },
+        {
+            "name": "vim-anyfold",
+            "user": "pseewald"
+        },
+        {
+            "name": "vim-prettier",
+            "user": "prettier"
+        },
+        {
+            "name": "vim-vue",
+            "user": "posva"
+        },
+        {
+            "name": "YouCompleteMe",
+            "user": "Valloric"
+        }
+    ]
 }
