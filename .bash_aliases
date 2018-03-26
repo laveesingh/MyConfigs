@@ -8,10 +8,10 @@ alias ms="python manage.py shell"
 alias c++="g++ -std=c++14 -o a"
 alias tmux-restore="~/.tmux/tmux-resurrect/scripts/restore.sh"
 alias tmux-save="~/.tmux/tmux-resurrect/scripts/save.sh"
-alias ta="tmux -2 attach -t"
-alias td="tmux -2 detach"
+alias ta="tmux -u2 attach -t"
+alias td="tmux -u2 detach"
 alias tn="tmux -u2 new-session -s"
-alias tl="tmux -2 ls"
+alias tl="tmux -u2 ls"
 alias tname="tmux display-message -p '#S'"
 
 song(){
