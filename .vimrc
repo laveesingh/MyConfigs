@@ -4,6 +4,16 @@ autocmd! bufwritepost .vimrc source %
 
 " important mappings and settings
 
+
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'wakatime/vim-wakatime'
+call vundle#end()
+
+
 set encoding=utf-8
 let mapleader=","
 inoremap jj <ESC>
