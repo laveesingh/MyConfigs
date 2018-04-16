@@ -1,56 +1,12 @@
 " Automatic reloading of .vimrc
 autocmd! bufwritepost .vimrc source %
 
-" Default cpp template
-"au BufNewFile *.cpp 0r ~/Templates/template.cpp
 
-let mapleader = ","
+" important mappings
 
-" Cool configurations 
-set backspace=indent,eol,start  " enable backspace key in several cases
-set ruler  " show info in statusline
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
-set number
-set expandtab
-set t_Co=256  " force vim to use 256 colors
-" set background=dark
-filetype on
-filetype plugin indent on
-syntax on
-set splitright
-set splitbelow
-" set textwidth=79
+let mapleader=","
+inoremap jj <ESC>
 
-" Displayed Properties
-set showcmd
-colorscheme desert
-set cursorline
-hi CursorLine term=bold cterm=bold ctermbg=16
-highlight LineNr ctermbg=0
-
-
-" Other awesome properties
-set wildmenu
-set incsearch
-set hlsearch
-set pastetoggle=<F2>
-nnoremap gV `[v`]
-
-" set mouse=a "mouse actions work
-
-" Disable creation of backup files
-set noswapfile
-set nobackup
-set nowritebackup
-set colorcolumn=80
-highlight ColorColumn ctermbg=0;
-
-" autoread on filechange
-set autoread
-
-" Movement in insertion mode
 imap <c-h> <Left>
 imap <c-j> <Down>
 imap <c-k> <Up>
@@ -62,26 +18,65 @@ imap <c-u> <ESC><c-u>a
 
 imap <C-Space> <C-X><C-O>
 
-let mapleader=","
-"Tab movements
 map <Leader>j <esc>:tabprevious<CR>
 map <Leader>k <esc>:tabnext<CR>
 
-"Better indentation
 vnoremap < <gv
 vnoremap > >gv
 
-
-inoremap jj <ESC>
-
-" Split movements
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 nnoremap <c-k> <c-w>k
 nnoremap <c-j> <c-w>j
 
+nnoremap gV `[v`]
 
-" Ultisnips config
+
+" cool display properties
+filetype on
+filetype plugin indent on
+syntax on
+colorscheme desert
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+set ruler  " show info in statusline
+set number
+set expandtab
+set t_Co=256  " force vim to use 256 colors
+set splitright
+set splitbelow
+set backspace=indent,eol,start  " enable backspace key in several cases
+set showcmd
+
+set cursorline
+set cursorcolumn
+set colorcolumn=80
+hi CursorLine term=bold cterm=bold ctermbg=234
+hi CursorColumn term=bold cterm=bold ctermbg=234
+hi ColorColumn ctermbg=234
+hi LineNr ctermbg=236
+
+
+" Other awesome properties
+set wildmenu
+set incsearch
+set hlsearch
+set pastetoggle=<F2>
+
+
+" Disable creation of backup files
+set noswapfile
+set nobackup
+set nowritebackup
+
+
+" autoread on filechange
+set autoread
+
+" Plugins configs
+
+" Ultisnips
 let g:UltiSnipsSnippetsDir        = '~/.vim/UltiSnips/'
 "let g:UltiSnipsSnippetDirectories=["UltiSnips"]
 let g:UltiSnipsExpandTrigger="<c-j>"
@@ -89,7 +84,7 @@ let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 let g:UltiSnipsListSnippets="<c-h>"
 
-" YouCompleteMe configs
+" YouCompleteMe
 let g:ycm_min_num_of_chars_for_completion = 1
 let g:ycm_auto_trigger = 1
 let g:ycm_complete_in_comments = 1 
@@ -99,13 +94,8 @@ let g:ycm_seed_identifiers_with_syntax = 1
 let g:ycm_collect_identifiers_from_comments_and_strings = 1 
 let g:ycm_python_binary_path = '/usr/bin/python3'
 
-" AirlineThemes configs
 
-" syntastic configs
-"set statusline+=%#warningmsg#
-"set statusline+=%{SyntasticStatuslineFlag()}
-"set statusline+=%*
-
+" syntastic
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
@@ -119,14 +109,11 @@ let g:jsx_ext_required = 0
 
 " vim any-fold config
 let anyfold_activate=1
-set foldlevel=0
+set foldlevel=999
 
 
 execute pathogen#infect()
 call pathogen#helptags()
-
-" requires installation of monokai
-"colorscheme monokai
 
 
 " Autostart NERDTree
@@ -149,3 +136,7 @@ imap <c-x><c-l> <plug>(fzf-complete-line)
 
 " Advanced customization using autoload functions
 inoremap <expr> <c-x><c-k> fzf#vim#complete#word({'left': '15%'})2
+
+" autopep8 settings
+let g:autopep8_disable_show_diff=1
+let g:autopep8_max_line_length=79
