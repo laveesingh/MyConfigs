@@ -2,8 +2,9 @@
 autocmd! bufwritepost .vimrc source %
 
 
-" important mappings
+" important mappings and settings
 
+set encoding=utf-8
 let mapleader=","
 inoremap jj <ESC>
 
@@ -35,15 +36,19 @@ nnoremap gV `[v`]
 " cool display properties
 filetype on
 filetype plugin indent on
-syntax on
+syntax enable
 colorscheme desert
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
-set ruler  " show info in statusline
+set autoindent
+set wrap
+set smarttab
+set ruler
 set number
 set expandtab
-set t_Co=256  " force vim to use 256 colors
+set scrolloff=3
+set t_Co=256
 set splitright
 set splitbelow
 set backspace=indent,eol,start  " enable backspace key in several cases
@@ -62,6 +67,7 @@ hi LineNr ctermbg=236
 set wildmenu
 set incsearch
 set hlsearch
+set smartcase
 set pastetoggle=<F2>
 
 
