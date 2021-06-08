@@ -1,0 +1,29 @@
+#!/usr/bin/env sh
+
+IFS=$'\n'
+set -f
+IP_ADDR=($(./aws_info.py -ip 1))
+
+osascript \
+	-e 'tell application "iTerm" to activate'\
+	-e 'tell application "System Events" to tell process "iTerm" to keystroke "d" using command down' \
+	-e "tell application \"System Events\" to tell process \"iTerm\" to keystroke \"ssh -i ~/.ssh/tripguru_aws.pem ec2-user@${IP_ADDR[0]}\" " \
+	-e 'tell application "System Events" to tell process "iTerm" to key code 52'
+sleep 3
+osascript \
+	-e 'tell application "iTerm" to activate'\
+	-e "tell application \"System Events\" to tell process \"iTerm\" to keystroke \"docker exec -ti \$(docker ps | grep 'sh ent' | cut -d ' ' -f 1) python manage.py shell\" " \
+	-e 'tell application "System Events" to tell process "iTerm" to key code 52'
+
+sleep 3
+osascript \
+	-e 'tell application "iTerm" to activate'\
+	-e 'tell application "System Events" to tell process "iTerm" to keystroke "d" using command down' \
+	-e "tell application \"System Events\" to tell process \"iTerm\" to keystroke \"ssh -i ~/.ssh/tripguru_aws.pem ec2-user@${IP_ADDR[1]}\" " \
+	-e 'tell application "System Events" to tell process "iTerm" to key code 52'
+sleep 3
+osascript \
+	-e 'tell application "iTerm" to activate'\
+	-e "tell application \"System Events\" to tell process \"iTerm\" to keystroke \"docker exec -ti \$(docker ps | grep 'sh ent' | cut -d ' ' -f 1) python manage.py shell\" " \
+	-e 'tell application "System Events" to tell process "iTerm" to key code 52'
+
